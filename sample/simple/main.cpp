@@ -9,15 +9,15 @@
 int main( int argc, char* argv[] )
 {
     // Open VelodyneCapture that retrieve from Sensor
-    const boost::asio::ip::address address = boost::asio::ip::address::from_string( "192.168.1.21" );
-    const unsigned short port = 2368;
-    velodyne::VLP16Capture capture( address, port );
+    //const boost::asio::ip::address address = boost::asio::ip::address::from_string( "192.168.1.21" );
+    //const unsigned short port = 2368;
+    //velodyne::VLP16Capture capture( address, port );
     //velodyne::HDL32ECapture capture( address, port );
 
-    /*
-    // Open VelodyneCapture that retrieve from PCAP
     const std::string filename = "../file.pcap";
     velodyne::VLP16Capture capture( filename );
+    /*
+    // Open VelodyneCapture that retrieve from PCAP
     //velodyne::HDL32ECapture capture( filename );
     */
 
@@ -62,8 +62,8 @@ int main( int argc, char* argv[] )
             std::cout << "id : " << id << "\n";
 
             // Laser TimeStamp ( microseconds )
-            const long long unixtime = laser.time;
-            std::cout << "unixtime : " << unixtime << "\n";
+            const long long timestamp = laser.time;
+            std::cout << "timestamp : " << timestamp << "\n";
 
             /*
             // Laser TimeStamp ( MM/DD/YY hh:mm:ss.ffffff )
